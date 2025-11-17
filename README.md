@@ -90,7 +90,7 @@ API runs at:
 # Docker Hub Repository
 
 Your Docker image is available here:
- **https://hub.docker.com/r/sumanthchand23/fastapi-secure-app**
+ **https://hub.docker.com/r/sumanthchand23/fastapi-secure-app/tags**
 
 Tags automatically pushed:
 
