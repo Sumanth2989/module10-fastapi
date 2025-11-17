@@ -1,0 +1,20 @@
+# app/schemas.py
+from pydantic import BaseModel, EmailStr, constr
+from datetime import datetime
+
+
+class UserBase(BaseModel):
+    username: constr(strip_whitespace=True, min_length=3, max_length=50)
+    email: EmailStr
+
+
+class UserCreate(UserBase):
+    password: constr(min_length=8)
+
+
+class UserRead(UserBase):
+    id: int
+    created_at: datetime
+
+    class Config:
+        orm_mode = True
