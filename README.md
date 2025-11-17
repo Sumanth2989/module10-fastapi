@@ -13,62 +13,36 @@ This project serves as the foundation for future modules and the final project.
 
 ---
 
-## 🚀 Features
+## Features
 
-### 🔐 Secure User Model
+### Secure User Model
 - Unique `username` and `email`
 - Hashed `password_hash` using bcrypt
 - `created_at` timestamp
 - SQLAlchemy ORM model
 
-### 📦 Pydantic Schemas
+### Pydantic Schemas
 - `UserCreate` — input validation for new users  
 - `UserRead` — safe output schema (no password hash exposed)
 
-### 🔑 Password Hashing
+### Password Hashing
 - Secure hashing using `passlib[bcrypt]`
 - Password verification helper
 
-### 🧪 Testing
+### Testing
 - Unit tests for hashing and schema validation  
 - Integration tests with real PostgreSQL (Testcontainers)  
 - All tests run automatically in CI
 
-### ⚙️ CI/CD Pipeline
+### CI/CD Pipeline
 - Runs tests on every push  
 - Builds & pushes Docker image to Docker Hub when tests pass  
 - Uses GitHub Actions + Docker Buildx
 
 ---
 
-# 📁 Project Structure
 
-```
-.
-├── app
-│   ├── main.py
-│   ├── db.py
-│   ├── models.py
-│   ├── schemas.py
-│   ├── security.py
-│   ├── crud.py
-│   └── config.py
-├── tests
-│   ├── test_security.py
-│   ├── test_schemas.py
-│   └── test_users_integration.py
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-├── README.md
-└── .github
-    └── workflows
-        └── ci.yml
-```
-
----
-
-# 🧪 Running Tests Locally
+# Running Tests Locally
 
 ### 1. Start PostgreSQL (via Docker)
 
@@ -91,7 +65,7 @@ pytest -q
 
 ---
 
-# 🏗️ Running the Application with Docker
+# Running the Application with Docker
 
 ### 1. Pull the latest image
 
@@ -109,15 +83,14 @@ docker run -p 8000:8000 \
 
 API runs at:
 
-➡️ http://localhost:8000
+ http://localhost:8000
 
 ---
 
-# 🐳 Docker Hub Repository
+# Docker Hub Repository
 
 Your Docker image is available here:
-
-👉 **https://hub.docker.com/r/sumanthchand23/fastapi-secure-app**
+ **https://hub.docker.com/r/sumanthchand23/fastapi-secure-app**
 
 Tags automatically pushed:
 
@@ -126,7 +99,7 @@ Tags automatically pushed:
 
 ---
 
-# 🔄 CI/CD Workflow Overview
+# CI/CD Workflow Overview
 
 Your GitHub Actions pipeline performs:
 
@@ -143,7 +116,7 @@ This ensures complete automated testing + deployment.
 
 ---
 
-# 📝 Reflection
+# Reflection
 
 This project helped me understand how to build a secure API using FastAPI, SQLAlchemy, and Pydantic while following production-grade development practices. I learned how to implement proper password hashing, create validation schemas, and write both unit and integration tests.
 

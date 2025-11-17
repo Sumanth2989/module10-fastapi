@@ -1,0 +1,14 @@
+This module helped me strengthen my understanding of secure user management in FastAPI.
+I learned how password hashing works in practice and why storing plain-text passwords is unsafe. 
+Using passlib[bcrypt] gave me a clear picture of how hashing and verification protect users even if the database is exposed.
+
+I also gained new insights into input validation with Pydantic. 
+Validators like EmailStr ensure that only correct and safe data enters the system, 
+reducing the chances of invalid records or security issues. 
+I hadn’t realized that certain Pydantic validators rely on external packages, and missing email-validator caused test collection errors—fixing this taught me to pay closer attention to dependencies.
+
+I faced a couple of hurdles during the project. 
+Setting environment variables such as TEST_DATABASE_URL was necessary for integration tests to run successfully with PostgreSQL. 
+Another challenge was configuring Docker Hub authentication inside GitHub Actions. 
+The image push failed at first because I hadn’t added the required secrets, but once I added my username and token, 
+the pipeline worked correctly.
